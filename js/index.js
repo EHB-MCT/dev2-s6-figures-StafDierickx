@@ -11,18 +11,21 @@ const form = {
     changeSelect(select) {
         const target_value = select.target.value;
         const results = document.querySelector('#results');
+        let html = '';
 
         console.log('Select changed!', target_value);
         if (target_value === 'circle') {
+            const circle = new Circle('Circle', 1);
             
         } else if (target_value === 'rectangle') {
             const rectangle = new Rectangle('Rectangle', 1, 1);
-            results.appendChild(rectangle.htmlString())
+            html = rectangle.htmlString();
         } else if (target_value === 'square') {
             const square = new Square('Square', 1);
-            console.log("square",square.htmlString())
-            results.appendChild(square.htmlString());
+            html = square.htmlString();
         }
+
+        results.innerHTML = html;
     },
     init() {
         console.log('Form init!');

@@ -11,7 +11,7 @@ export default class Square extends Figure {
     htmlString() {
      
         console.log("square html: ",this.name)
-        return `
+        const html = `
         <div class="result">
             <div class="figure rectangle" style="width: WIDTHpx; height: HEIGHTpx"></div>
             <div class="infoBox">
@@ -32,6 +32,7 @@ export default class Square extends Figure {
             </div>
         </div>
         `;
+        return html;
     }
 }
 
