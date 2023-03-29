@@ -1,28 +1,50 @@
 <!DOCTYPE html>
-  <head>
-    <title>S6 - Classes - Figure it out</title>
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
-  </head>
-  <body>
-    <h1>Figures generator</h1>
-    <section>
-      <form id="form">
-        <label>
-          Figures
-          <select id="select">
-            <option>Select a figure</option>
-            <option value="circle">Circle</option>
-            <option value="rectangle">Rectangle</option>
-            <option value="square">Square</option>
-          </select>
-        </label>
-        <div id="otherInputs">
-        </div>
-        <button type="submit">Add figure</button> 
-      </form>
-      <div id="results">     
-      </div>
-    </section>
-    <script type="module" src="./js/index.js"></script>
-  </body>
+<html lang="en">
+    <head>
+        <title>S6 - Classes - Figure it out</title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    </head>
+    <body>
+        <h1>Figures generator</h1>
+        <section>
+            <form id="form">
+                <label>
+                    Figures
+                    <select id="select">
+                        <option>Select a figure</option>
+                        <option value="circle">Circle</option>
+                        <option value="rectangle">Rectangle</option>
+                        <option value="square">Square</option>
+                    </select>
+                </label>
+                <div id="otherInputs"></div>
+                <button type="submit">Add figure</button>
+            </form>
+            <div id="results">
+                <div class="result">
+                    <div
+                        class="figure rectangle"
+                        style="width: WIDTHpx; height: HEIGHTpx"
+                    ></div>
+                    <div class="infoBox">
+                        <h3>${this.name}</h3>
+                        <dl>
+                            <dt>Height</dt>
+                            <dd>HEIGHT px</dd>
+
+                            <dt>Width</dt>
+                            <dd>WIDTH px</dd>
+
+                            <dt>Area</dt>
+                            <dd>AREA px</dd>
+
+                            <dt>Circumference</dt>
+                            <dd>CIRCUMFERENCE px</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="./js/index.js"></script>
+    </body>
 </html>
